@@ -22,10 +22,10 @@ class Scraper
       student[:name] = s.css("h4.student-name").text
       student[:location] = s.css("p.student-location").text
       student[:profile_url] = s.css("a").attribute("href").value
-      #binding.pry
+    
       students << student
     end
-      #binding.pry
+      
     students
   end
   

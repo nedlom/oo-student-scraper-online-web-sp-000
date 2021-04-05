@@ -11,7 +11,7 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    binding.pry
+    binding
     students_array.each do |s|
       self.new(s)
     end
@@ -19,7 +19,6 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    binding.pry
     attributes_hash.each{|key, value| self.send(("#{key}="), value)}
   end
 

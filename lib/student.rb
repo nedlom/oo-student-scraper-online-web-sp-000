@@ -7,11 +7,11 @@ class Student
   def initialize(student_hash)
     binding.pry
     student_hash.each{|key, value| self.send(("#{key}="), value)}
-    binding.pr
     self.class.all << self
   end
 
   def self.create_from_collection(students_array)
+    binding.pry
     students_array.each do |s|
       self.new(s)
     end
@@ -19,6 +19,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
+    binding.pry
     attributes_hash.each{|key, value| self.send(("#{key}="), value)}
   end
 
